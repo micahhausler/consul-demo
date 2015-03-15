@@ -14,6 +14,7 @@ pip install docker-compose
 git clone git@github.com:micahhausler/consul-demo.git
 cd consul-demo/
 docker-compose up
+```
 
 ## See the UI
 [http://192.168.59.103:8500/ui/](http://192.168.59.103:8500/ui/)
