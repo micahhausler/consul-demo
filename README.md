@@ -13,6 +13,7 @@ pip install docker-compose
 ```
 git clone git@github.com:micahhausler/consul-demo.git
 cd consul-demo/
+docker-compose build
 docker-compose up
 ```
 
