@@ -1,0 +1,21 @@
+# local files
+*.log
+*.pot
+*.pyc
+local_settings.py
+.idea
+.DS_Store
+
+# Coverage
+.coverage
+htmlcov/
+
+# VIM
+.*.swp
+
+# Environments
+env/
+venv/
+
+# IPythonNotebook
+.ipynb_checkpoints/

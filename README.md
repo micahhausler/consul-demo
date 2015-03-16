@@ -19,3 +19,11 @@ docker-compose up
 
 ## See the UI
 [http://192.168.59.103:8500/ui/](http://192.168.59.103:8500/ui/)
+
+## Interact
+Check out the IPython notebook Consul by running:
+```
+pip install -r python_app/requirements.txt
+ipython notebook --no-browser
+```
+and navigate to [/notebooks/Consul.ipnb](http://localhost:8888/notebooks/Consul.ipynb)
