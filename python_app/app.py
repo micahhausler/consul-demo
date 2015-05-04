@@ -25,7 +25,7 @@ def hello_world():
 def register():
     url = BASE_CONSUL_URL + '/v1/agent/service/register'
     data = {
-        'name': 'Python App',
+        'name': 'PythonApp',
         'address': 'app1',
         'check': {
             'http': 'http://app1:{port}/health'.format(port=PORT),
@@ -41,6 +41,9 @@ def register():
 
 if __name__ == '__main__':
     sleep(8)
-    print(register())
+    try:
+        print(register())
+    except:
+        pass
     app.debug = True
     app.run(host="0.0.0.0", port=PORT)

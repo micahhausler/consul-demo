@@ -1,9 +1,13 @@
 app1:
   build: ./python_app/
+  ports:
+    - "8080:8080"
+app2:
+  build: ./python_app/
   links:
     - "consul1:consul1"
   ports:
-    - "8080:8080"
+    - "8081:8080"
 consul1:
   image: "progrium/consul:latest"
   name: "consul1"
@@ -11,7 +15,9 @@ consul1:
   ports:
     - "8400:8400"
     - "8500:8500"
-    - "8600:53"
+    - "53:53"
+  links:
+    - app1
   command: "-server -bootstrap-expect 3 -ui-dir /ui"
 consul2:
   image: "progrium/consul:latest"

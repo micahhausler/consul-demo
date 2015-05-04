@@ -27,3 +27,11 @@ pip install -r python_app/requirements.txt
 ipython notebook --no-browser
 ```
 and navigate to [/notebooks/Consul.ipnb](http://localhost:8888/notebooks/Consul.ipynb)
+
+
+## Query the DNS API
+You can query the consul DNS API once your containers are up by running:
+
+```
+dig @$(boot2docker ip) PythonApp.service.consul +tcp
+```
